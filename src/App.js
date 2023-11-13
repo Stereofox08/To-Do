@@ -1,22 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
-import React, {useState} from 'react';
-import Drug from "./Drug/Drug";
+import React from 'react';
 import Header from "./Header/Header";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Item from "./Item/Item";
+
 function App() {
-    return (
-        <BrowserRouter>
-        <>
-            <Header/>
-            <Drug/>
-            <Routes>
-                <Route path="/Drug/g"></Route>
-            </Routes>
-        </>
-        </BrowserRouter>
-    );
+   return(
+       <div className="App">
+       <Header />
+       <Item/>
+           </div>
+   )
 }
 
 export default App;

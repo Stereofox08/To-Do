@@ -1,0 +1,13 @@
+.Task{
+    width:  200px;
+    height: 300px;
+    background-color: gray;
+}
+.Task__header{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #cba816;
+}

@@ -1,13 +1,22 @@
-import React from "react";
-function Header()
-{
+import React, { useState } from 'react';
+import Item from "../Item/Item";
+
+
+
+const Header = () => {
+    const [items, setItems] = useState([]);
+
+    const handleAddTask = () => {
+        setItems([...items, <Item key={items.length} />]);
+    };
+
     return (
-        <header className="container__header">
-            <div className="container__header-menu">Все задачи</div>
-            <div className="container__header-menu">Законченные</div>
-            <div className="container__header-menu">Не законченные</div>
-            <button className="container__header-menu">Добавить задачу</button>
-        </header>
+        <div>
+            <button onClick={handleAddTask}>Добавить задачу</button>
+            {/* Другие элементы заголовка здесь */}
+            {items}
+        </div>
     );
 };
+
 export default Header;
